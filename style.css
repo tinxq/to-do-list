@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100vh; /* ضمان أن الارتفاع يغطي الشاشة بالكامل */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.all {
+  font-family: Inter, Arial, sans-serif;
+  padding: 20px;
+  width: 100%; /* تغيير من 0% إلى 100% لضمان شغل المساحة */
+  max-width: 500px; /* الحد الأقصى للعرض */
+  border-radius: 12px;
+  background-color: pink;
+  background-image: url("assets/backg3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* ضمان توسيط العناصر الداخلية */
+  justify-content: center; /* توسيط عمودي داخل الحاوية */
+}
+
+.todo-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%; /* ضمان أن الحاوية تأخذ العرض الكامل للأب */
+}
+
+#taskInput {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #d03274;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#addTaskBtn {
+  width: 40px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: palevioletred;
+  border: 2px solid pink;
+  color: #fff;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#taskList li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+  background: rgba(246, 181, 202, 0.8);
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  border: 1px solid #201f1f;
+}
+
+#taskList li .left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+#taskList li span {
+  font-weight: 600;
+  font-size: 15px;
+  color: #000000;
+}
+
+.time-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  width: 100%; /* ضمان أن الحاوية تأخذ العرض الكامل */
+}
+
+.timeInput {
+  width: 80px;
+  padding: 6px;
+  font-size: 14px;
+  border: 4px solid #d37198;
+  border-radius: 6px;
+}
+
+.timerDisplay {
+  min-width: 64px;
+  text-align: center;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+#taskList li .controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.startBtn {
+  background-color: rgb(217, 233, 193);
+  color: var(--accent);
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(43, 140, 255, 0.15);
+}
+
+.startBtn:hover {
+  background-color: rgb(58, 219, 36);
+}
+
+.deleteBtn {
+  background-color: rgb(246, 135, 125);
+  color: var(--accent);
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(246, 69, 16, 0.15);
+}
+
+.deleteBtn:hover {
+  background-color: rgb(240, 65, 49);
+}
+
+li.running {
+  box-shadow: 0 4px 12px rgba(43, 140, 255, 0.08);
+}
+
+li.finished {
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+#seconds, #minutes, #hours {
+  width: 40px;
+  height: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: palevioletred;
+  border: 2px solid pink;
+  color: #fff;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#minutes {
+  width: 43px;
+}
+
+@media (max-width: 520px) {
+  .all {
+    width: 95%; /* عرض أكبر قليلاً للشاشات الصغيرة */
+    padding: 15px; /* تقليل الحشوة للشاشات الصغيرة */
+  }
+
+  #taskInput {
+    width: 100%; /* ضمان أن حقل الإدخال يأخذ العرض الكامل */
+    font-size: 13px; /* تقليل حجم الخط للشاشات الصغيرة */
+  }
+
+  .timeInput {
+    width: 60px; /* تصغير العرض للشاشات الصغيرة */
+    font-size: 13px;
+  }
+
+  .timerDisplay {
+    font-size: 13px;
+  }
+
+  #addTaskBtn {
+    width: 35px;
+    height: 28px;
+  }
+
+  #seconds, #minutes, #hours {
+    width: 35px;
+    height: 18px;
+    font-size: 12px;
+  }
+
+  #minutes {
+    width: 38px;
+  }
+}
