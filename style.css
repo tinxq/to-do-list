@@ -4,7 +4,7 @@
 
 html, body {
   height: 100%;
-  min-height: 100vh; /* ضمان أن الارتفاع يغطي الشاشة بالكامل */
+  min-height: 100vh;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -17,8 +17,8 @@ html, body {
 .all {
   font-family: Inter, Arial, sans-serif;
   padding: 20px;
-  width: 100%; /* تغيير من 0% إلى 100% لضمان شغل المساحة */
-  max-width: 500px; /* الحد الأقصى للعرض */
+  width: 100%; 
+  max-width: 500px;
   border-radius: 12px;
   background-color: pink;
   background-image: url("assets/backg3.jpg");
@@ -29,15 +29,15 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center; /* ضمان توسيط العناصر الداخلية */
-  justify-content: center; /* توسيط عمودي داخل الحاوية */
+  align-items: center;
+  justify-content: center; 
 }
 
 .todo-container {
   display: flex;
   gap: 8px;
   align-items: center;
-  width: 100%; /* ضمان أن الحاوية تأخذ العرض الكامل للأب */
+  width: 100%;
 }
 
 #taskInput {
@@ -98,7 +98,7 @@ html, body {
   display: flex;
   justify-content: center;
   gap: 8px;
-  width: 100%; /* ضمان أن الحاوية تأخذ العرض الكامل */
+  width: 100%; 
 }
 
 .timeInput {
@@ -177,17 +177,16 @@ li.finished {
 
 @media (max-width: 520px) {
   .all {
-    width: 95%; /* عرض أكبر قليلاً للشاشات الصغيرة */
-    padding: 15px; /* تقليل الحشوة للشاشات الصغيرة */
+    width: 95%; 
+    padding: 15px; 
   }
-
+}
   #taskInput {
-    width: 100%; /* ضمان أن حقل الإدخال يأخذ العرض الكامل */
-    font-size: 13px; /* تقليل حجم الخط للشاشات الصغيرة */
-  }
+    width: 100%; 
+    font-size: 13px; 
 
   .timeInput {
-    width: 60px; /* تصغير العرض للشاشات الصغيرة */
+    width: 60px;
     font-size: 13px;
   }
 
